@@ -1,0 +1,22 @@
+.song-wrap{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    margin-left: -30px;
+    margin-right: -30px;
+}
+.song-lyric{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 16px;
+    line-height: 1.5;
+    flex-basis: 50%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #111;
+}
+.song-lyric:first-child{
+    border-right: 0;
+}

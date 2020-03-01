@@ -1,0 +1,147 @@
+.header{
+    color: #fff;
+    background: #16171c;
+    position: absolute;
+    z-index: 14;
+    width: 100%;
+    top:0;
+    left: 0;
+}
+.header .container{
+    padding: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.mobmenu-link,
+.mobmsearch{
+    display: none;
+}
+.header__menu{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    list-style: none;
+}
+.header__menu>li{
+    position: relative;
+}
+.header__menu>li>a{
+    color:#c0c3d3;
+    height: 50px;
+    line-height: 50px;
+    font-family: "gilroy-web", sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding-right: 40px;
+}
+.header__menu>li>a:hover{
+    color:#fff;
+}
+.header__menu>ul ul{
+    display: block;
+    position: absolute;
+    top:100%;
+    left:0;
+    background: #000;
+}
+
+
+
+
+
+.search{
+}
+.search__form{
+    position: relative;
+}
+.search__form .search__item input{
+    display: block;
+    width: 180px;
+    height: 30px;
+    background: #1e2126;
+    border: 1px solid #1e2126;
+    border-radius: 15px;
+    border:none;
+    outline:none;
+    color:#44464a;
+    font-size: 12px;
+    line-height: 16px;
+    padding:7px 20px 7px 20px;
+    transition: width 0.2s ease-out 0s;
+}
+.search__form .search__item input:focus{
+    background: #111;
+    color:#ccc;
+    border: 1px solid #202328;
+    width: 250px;
+}
+.search__form .search__submit{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top:0;
+    right:0;
+    z-index: 2;
+}
+.search__form .search__submit button{
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    background: none;
+    border:none;
+    cursor: pointer;
+    color:#44464a;
+    font-size: 12px;
+    line-height: 30px;
+    outline: none;
+    text-align: center;
+}
+
+
+
+.header_fixed .header{
+    position: fixed;
+    background:#16171c;
+    background: #1e0b28;
+    border-bottom: 1px solid #222;
+}
+.header_fixed .header__menu>ul{
+    height: 30px;
+}
+.header_fixed .search{
+    display: none;
+}
+.header_fixed .header__menu>ul>li>a{
+    font-size: 11px;
+    text-transform: none;
+}
+
+
+
+
+
+
+
+
+
+.logowrap{
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+
+}
+.logowrap a{
+    max-width: 475px;
+    height: auto;
+    margin: 15px auto 30px;
+    display: block;
+}
+.logowrap img{
+    width: 100%;
+    display: block;
+}

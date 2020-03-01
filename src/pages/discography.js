@@ -1,0 +1,55 @@
+import React from "react"
+// import { Link, graphql } from "gatsby"
+
+import './css/discography.css'
+
+import Layout from "../components/layout"
+import Discalbum from "../components/Discalbum"
+
+
+
+const Discography = ({ data }) => {
+
+  return (
+    <Layout inner={true}>
+        <div className="page__content">
+          
+            <div className="pagehtml__title pagehtml__title--centred">Дискография Evanescence</div>
+            <div className="pagehtml__menu">
+                <ul>
+                    <li><a href="#" className="active">Альбомы</a></li>
+                    <li><a href="#">Сигнлы</a></li>
+                </ul>
+            </div>
+            {
+              data.allMarkdownRemark.edges.map((item) => (
+                <Discalbum key={item.node.frontmatter.title} albumData={item.node} />
+              ))
+            }
+      </div>
+    </Layout>
+  )
+}
+
+export default Discography
+
+
+export const query = graphql`
+query Discs {
+  allMarkdownRemark(filter: {frontmatter: {type: {eq: "album"}}}, sort: {fields: frontmatter___yearof, order: DESC}) {
+    edges {
+      node {
+        frontmatter {
+          yearof
+          title
+          list
+          image {
+            publicURL
+          }
+        }
+        html
+      }
+    }
+  }
+}
+`;

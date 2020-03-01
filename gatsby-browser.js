@@ -5,3 +5,8 @@
  */
 
 // You can delete this file if you're not using it
+import './src/css/normalize.css'
+import './src/css/bootstrap-grid.min.css'
+import './src/css/fontawesome/css/fontawesome.min.css'
+import './src/css/fontawesome/css/solid.min.css'
+import './src/css/fontawesome/css/brands.min.css'

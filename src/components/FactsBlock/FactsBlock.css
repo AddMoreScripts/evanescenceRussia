@@ -1,0 +1,30 @@
+.factsblock{
+    margin-top: 60px;
+}
+.factsblock__txt{
+    margin-top: 15px;
+    background:rgba(0,0,0,0.5);
+    padding: 20px 30px;
+    border-radius: 5px;
+    color:#b9bdbf;
+    font-size: 16px;
+    line-height: 24px;
+    font-style: italic;
+
+}
+.factsblock__link{
+    display: block;
+    float: right;
+    padding-right: 5px;
+    font-size: 10px;
+    line-height: 1;
+    color:#5d5d5f;
+    text-transform: uppercase;
+    padding-top: 10px;
+    font-weight: 600;
+    font-family: "gilroy-web", sans-serif;
+    letter-spacing: 0.1em;
+}
+.factsblock__link:hover{
+    color:#fff;
+}

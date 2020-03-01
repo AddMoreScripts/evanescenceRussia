@@ -1,0 +1,131 @@
+.footer{
+    background: #141519;
+    min-height: 340px;
+    background: url(../../images/footer.jpg) #141519 center top no-repeat;
+    padding-top: 45px;
+}
+.footer__left{
+
+}
+.footer__logo{
+    max-width: 260px;
+    display: block;
+}
+.footer__logo>img{
+    display: block;
+    width: 100%;
+}
+.footer__descr{
+    font-size: 12px;
+    line-height: 18px;
+    color:#7b7b90;
+    padding-top: 50px;
+}
+.footer__social__we{
+    padding-top: 25px;
+}
+.footer__title{
+    font-size: 18px;
+    line-height: 20px;
+    color:#a0a0c7;
+    font-family: "gilroy-web", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.footer__iconwrap{
+    font-size: 24px;
+    padding-top: 10px;
+    overflow: hidden;
+    font-size: 0;
+}
+.footer__iconwrap a{
+    font-size: 24px;
+    display: inline-block;
+    vertical-align: top;
+    color:#fff;
+    margin-right: 20px;
+    opacity: 0.8;
+    transition:opacity 0.3s ease 0s;
+}
+.footer__iconwrap a:hover{
+    opacity: 1;
+}
+.footer__iconwrap_first{
+    padding-bottom: 70px;
+}
+.footer__nav{
+    padding-top: 25px;
+}
+.footer__nav>ul{
+    padding-top: 20px;
+}
+.footer__nav>ul>li{
+    font-size: 14px;
+    line-height: 30px;
+    white-space: nowrap;
+}
+.footer__nav>ul>li>a{
+    color:#fff;
+}
+.footer__nav>ul>li>a:hover{
+    color:#a0a0c7;
+}
+.footer__nav>ul>li>ul{
+    display: inline-block;
+    font-size: 11px;
+    vertical-align: baseline;
+    padding-left: 4px;
+}
+.footer__nav>ul>li>ul>li{
+    display: inline-block;
+    vertical-align: baseline;
+    padding: 0 5px 0 0;
+}
+.footer__nav>ul>li>ul>li:before{
+    display: inline-block;
+    content: "•";
+    position: relative;
+    color:#7e8097;
+    margin-right: 7px;
+}
+.footer__nav>ul>li>ul a{
+    color:#7e8097;
+}
+.footer__nav>ul>li>ul a:hover{
+    color:#fff;
+}
+.botmenu__row{
+    padding-top: 3px;
+    height: 50px;
+}
+.botmenu{
+    color:#7b7b90;
+}
+.botmenu li{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    padding-right: 20px;
+}
+.botmenu li:after{
+    display: inline-block;
+    content: "•";
+    position: relative;
+    color:#7b7b90;
+    margin-left: 25px;
+}
+.botmenu li:last-child:after{
+    display: none;
+}
+.botmenu a{
+    color:#7b7b90;
+    text-transform: uppercase;
+}
+.botmenu a:hover{
+    color:#fff;
+}
+.copy{
+    color:#7b7b90;
+    font-size: 9px;
+    text-transform: uppercase;
+}

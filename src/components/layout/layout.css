@@ -1,0 +1,192 @@
+@font-face {
+    font-family: 'gilroy-web';
+    src: url('../../font/Gilroy-Regular.woff2') format('woff2'),
+         url('../../font/Gilroy-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gilroy-web';
+    src: url('../../font/Gilroy-Medium.woff2') format('woff2'),
+         url('../../font/Gilroy-Medium.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gilroy-web';
+    src: url('../../font/Gilroy-SemiBold.woff2') format('woff2'),
+         url('../../font/Gilroy-SemiBold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'firasans-web';
+    src: url('../../font/FiraSans-Regular.woff2') format('woff2'),
+         url('../../font/FiraSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'firasans-web';
+    src: url('../../font/FiraSans-Italic.woff2') format('woff2'),
+         url('../../font/FiraSans-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+@media all and (min-width: 1200px){
+    .container{
+        max-width: 1200px;
+    }
+}
+body{
+    font-family: 'firasans-web', sans-serif;
+    color:#fff;
+    background: #212128;
+}
+input, textarea, select, button{
+    font-family: inherit;
+}
+.flexi{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+ul, li, p{
+    margin: 0;
+    padding:0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:#bfe3ec;
+}
+a:hover{
+    color:#f0f0f0;
+}
+div{
+    box-sizing: border-box;
+}
+
+
+
+
+
+.wrap{
+    background: url(../../images/bg.jpg) #16171c center top no-repeat;
+    position: relative;
+    padding-top: 50px;
+}
+.page{
+    background: #080b0f;
+    color:#a6adbb;
+    padding:0 65px 65px;
+    margin-bottom: 50px;
+}
+.page__title{
+    font-size: 30px;
+    line-height: 42px;
+    font-family: "gilroy-web", sans-serif;
+    font-weight: 700;
+    margin: 0 0 0;
+    padding-top: 50px;
+    color:#fff;
+}
+
+
+
+
+
+.page__content{
+    font-size: 16px;
+    line-height: 28px;
+    padding-top: 0px;
+    padding-right: 50px;
+}
+.page__content--simple{
+    margin-right: 0;
+    max-width: 800px;
+}
+.page__title_rightgap{
+    padding-right: 50px;
+}
+.page__text{
+    margin-top: 48px;
+}
+.page__text p{
+    margin-bottom: 24px;
+}
+.page__text a{
+    color:#fff;
+}
+.page__text a:hover{
+    color:#a0a0c7;
+}
+.page__text img{
+    display: block;
+    margin:48px 0;
+    max-width: 100%;
+}
+.page__text blockquote{
+    margin:24px 0;
+    padding: 24px;
+    overflow: hidden;
+    border-radius: 10px;
+    font-style: italic;
+    background: #1e0b28;
+}
+.page__text blockquote small,
+.page__text blockquote cite{
+    display: block;
+    font-size: 90%;
+    padding-bottom: 10px;
+    color:#7e8097;
+}
+.page__text blockquote p{
+    margin-bottom: 0;
+}
+.page__text h2{
+    font-size: 24px;
+    line-height: 28px;
+    color:#fff;
+    font-weight: 700;
+    font-family: "gilroy-web", sans-serif;
+    margin:48px 0 24px;
+}
+.page__text h3{
+    font-size: 18px;
+    line-height: 24px;
+    color:#fff;
+    font-weight: 700;
+    font-family: "gilroy-web", sans-serif;
+    margin:36px 0 24px;
+}
+.page__text h2>i,
+.page__text h3>i{
+    margin-right: 10px;
+}
+.page__text ul{
+    padding-bottom: 24px;
+}
+.page__text ul li{
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 3px;
+}
+.page__text ul li:before{
+    position: absolute;
+    content:"\f111";
+    font-family: foont;
+    display: block;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color:#fff;
+    top:0px;
+    left: 12px;
+    font-size: 4px;
+}
+.page__leadvideo{
+    clear: both;
+    padding-top: 50px;
+    max-width: 800px;
+}
