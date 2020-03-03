@@ -8,11 +8,11 @@ const Breadcrumbs = ({data}) => {
     return (
         <div className="breadcrumbs col-12">
             <Link to="/">Главная</Link>
-            {data.map((item)=>{
-                if(item.link){
-                    return (<Link to={item.path}>{item.title}</Link>)
+            {data.map((item, index)=>{
+                if(index < (data.length - 1)){
+                    return (<Link key={item.title} to={item.path}>{item.title}</Link>)
                 } else {
-                    return (<span>{item.title}</span>)
+                    return (<span key={item.title}>{item.title}</span>)
                 }
             })}
         </div>
@@ -24,7 +24,6 @@ Breadcrumbs.defaultProps = {
         {
             title: "Главная",
             path: '/',
-            link: true,
         }
     ]
 }

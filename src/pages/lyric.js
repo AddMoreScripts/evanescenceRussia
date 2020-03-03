@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import './css/lyric.css'
 
 import Layout from "../components/layout"
+import Breadcrumbs from '../components/Breadcrumbs'
 
 
 
@@ -29,10 +30,10 @@ const Lyric = ({ data }) => {
             if(result.length === 0) continue;
 
             out.push(
-                <div>
+                <div key={i}>
                     <h3>{String.fromCodePoint(i)}</h3>
                     {result.map((item)=>(
-                        <Link to={'/songs/' + item.path}>{item.title}</Link>
+                        <Link key={item.title} to={'/songs/' + item.path}>{item.title}</Link>
                     ))}
                 </div>
             );         
@@ -43,6 +44,12 @@ const Lyric = ({ data }) => {
 
     return (
     <Layout inner={true}>
+        <Breadcrumbs data={[
+            {
+                title: "Песни", 
+                path:"/",
+            }
+        ]}/>
         <div className="page__content page__content--simple">
             <h1 className="page__title">Тексты и переводы песен Evanescence</h1>
             {letterCicle()}

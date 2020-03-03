@@ -24,6 +24,7 @@
     align-items: center;
     justify-content: flex-start;
     list-style: none;
+    margin-left: -20px;
 }
 .header__menu>li{
     position: relative;
@@ -37,7 +38,7 @@
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.05em;
-    padding-right: 40px;
+    padding: 0 20px;
 }
 .header__menu>li>a:hover{
     color:#fff;
@@ -104,19 +105,19 @@
 
 
 
-.header_fixed .header{
+.header--fixed{
     position: fixed;
     background:#16171c;
     background: #1e0b28;
     border-bottom: 1px solid #222;
 }
-.header_fixed .header__menu>ul{
+.header--fixed .header__menu{
     height: 30px;
 }
-.header_fixed .search{
+.header--fixed .search{
     display: none;
 }
-.header_fixed .header__menu>ul>li>a{
+.header--fixed .header__menu>li>a{
     font-size: 11px;
     text-transform: none;
 }

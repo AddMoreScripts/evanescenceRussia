@@ -143,6 +143,9 @@ div{
     color:#7e8097;
 }
 .page__text blockquote p{
+    margin-bottom: 18px;
+}
+.page__text blockquote p:last-child{
     margin-bottom: 0;
 }
 .page__text h2{

@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useState, useEffect } from "react"
 // import { useStaticQuery, graphql } from "gatsby"
 import './layout.css'
 
@@ -16,11 +16,43 @@ import Footer from "../Footer"
 
 const Layout = ({ children, inner }) => {
 
+  let [headerFixed, setheaderFixed] = useState(false);
 
-  if(inner){
+  useEffect(() => {
+
+    //fixed of the menu
+    let trigger = false;
+
+    function resetTrigger(){
+      trigger = true;
+    }
+    window.addEventListener('scroll', resetTrigger);
+    let scrollInterval = setInterval(function () {
+      if (trigger) {
+        trigger = false;
+        var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrolled >= 200) {
+          setheaderFixed(true);
+        }
+        else {
+          setheaderFixed(false);
+        }
+      }
+    }, 250);
+
+    return function cleanAll(){
+      clearInterval(scrollInterval);
+      window.removeEventListener('scroll', resetTrigger);
+    }
+
+  });
+
+
+
+  if (inner) {
     return (
       <div className="wrap">
-        <Header />
+        <Header isFixed={headerFixed} />
         <div className="page container">
           {children}
         </div>
@@ -31,7 +63,7 @@ const Layout = ({ children, inner }) => {
 
   return (
     <div className="wrap">
-      <Header />
+      <Header isFixed={headerFixed} />
       {children}
       <Footer />
     </div>

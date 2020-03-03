@@ -5,12 +5,11 @@ import logo from '../../images/logo2.png'
 
 
 
-const Header = () => {
-
+const Header = ({isFixed}) => {
 
   return (
     <>
-      <div className="header">
+      <div className={"header " + (isFixed ? 'header--fixed':'')}>
         <div className="container">
           <span className="mobmenu-link" id="jsMobMenuLink"><i className="fas fa-bars"></i> <small>Меню</small></span>
           <ul className="header__menu">
@@ -24,7 +23,7 @@ const Header = () => {
                 <Link to='/discography/'>Дискография</Link>
             </li>
             <li>
-                <Link to='/'>Медиа</Link>
+                <Link to='/media/'>Медиа</Link>
             </li>
             <li>
                 <Link to='/lyric/'>Песни</Link>

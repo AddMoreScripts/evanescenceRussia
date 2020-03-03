@@ -12,12 +12,10 @@ export default ({ data }) => {
         {
             title: "Песни",
             path: '/lyric/',
-            link: true,
         },
         {
             title: data.markdownRemark.frontmatter.title,
-            path: '/songs/' + data.markdownRemark.frontmatter.path,
-            link: false,
+            path: '',
         },
     ]
     return (
