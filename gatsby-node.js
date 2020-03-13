@@ -33,9 +33,9 @@ exports.createPages = async ({ graphql, actions }) => {
         allMarkdownRemark(filter: {frontmatter: {type: {eq: "song"}}}) {
           edges {
             node {
+              id
               frontmatter {
                 path
-                title
               }
             }
           }
@@ -49,7 +49,7 @@ exports.createPages = async ({ graphql, actions }) => {
         context: {
           // Data passed to context is available
           // in page queries as GraphQL variables.
-          title: node.frontmatter.title,
+          id: node.id,
         },
       });
     });

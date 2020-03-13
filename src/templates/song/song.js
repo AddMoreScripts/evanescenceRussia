@@ -39,8 +39,8 @@ export default ({ data }) => {
 
 
 export const query = graphql`
-query($title: String!) {
-    markdownRemark(frontmatter: {title: {eq: $title}}) {
+query($id: String!) {
+    markdownRemark(id: {eq: $id}) {
         html
         frontmatter {
             path
