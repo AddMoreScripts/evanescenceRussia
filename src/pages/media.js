@@ -28,7 +28,7 @@ export default ({ data }) => {
                         </div>
                         <div className="media-block__content">
                             {data.allMarkdownRemark.edges.map((item, index) => {
-                                if(index > 3){return}
+                                if(index > 3){return false;}
                                 return (
                                     <MediaItem
                                         key={item.node.frontmatter.title}

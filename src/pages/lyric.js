@@ -18,6 +18,7 @@ const Lyric = ({ data }) => {
             if(item.node.frontmatter.title.charAt(0).toLowerCase() === letter){
                 outArray.push(item.node.frontmatter)
             }
+            return;
         });
         return outArray;
     }

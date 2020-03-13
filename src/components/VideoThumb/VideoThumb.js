@@ -4,10 +4,10 @@ import './VideoThumb.css'
 
 import youTubeIcon from '../../images/youtube_color.svg'
 
-const VideoThumb = ({thumb, big, red, link}) => {
+const VideoThumb = ({thumb, big, red, link, onClick}) => {
     if(link){
         return (
-            <a href="#" className={`videothumb ${big ? 'videothumb--big':""}`}>
+            <a href="#" className={`videothumb ${big ? 'videothumb--big':""}`} onClick={onClick}>
                 {thumb ? <img src={thumb} alt=""></img>: ''}
                 <div className="videothumb__over">
                     { red ? <img src={youTubeIcon} alt=""/>: <i className="fab fa-youtube"></i>}
@@ -17,7 +17,7 @@ const VideoThumb = ({thumb, big, red, link}) => {
     }
 
     return (
-        <div className={`videothumb ${big ? 'videothumb--big':""}`}>
+        <div className={`videothumb ${big ? 'videothumb--big':""}`} onClick={onClick}>
             {thumb ? <img src={thumb} alt=""></img>: ''}
             <div className="videothumb__over">
                 { red ? <img src={youTubeIcon} alt=""/>: <i className="fab fa-youtube"></i>}

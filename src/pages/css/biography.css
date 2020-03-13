@@ -56,12 +56,14 @@ a.bio__name:hover{
 }
 .bio__social a{
     display: inline-block;
-    font-size: 12px;
+    vertical-align: top;
+    font-size: 13px;
     text-align: center;
-    line-height: 27px;
+    line-height: 25px;
     width: 25px;
     height: 25px;
     border-radius: 13px;
+    color:#fff;
     background-color: #5e6875;
     opacity: 0.6;
     margin: 0 5px;
@@ -76,6 +78,13 @@ a.bio__name:hover{
     position: relative;
 }
 .sideimg figure{
+    display: block;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
+}
+.sideimg__content,
+.sideimg>figure{
     position: absolute;
     top:0;
     left: 100%;
@@ -83,7 +92,7 @@ a.bio__name:hover{
     margin: 0;
     width: 290px;
     padding-left: 40px;
-}
+}   
 .sideimg img{
     display: block;
     margin:0;
