@@ -1,28 +1,29 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, useStaticQuery, graphql} from 'gatsby'
 import './FrontNewsItem.css'
 import ShareBlock from '../ShareBlock'
 
 import defaultThumb from '../../images/content/g4.png';
 
 
-const FrontNewsItem = ({thumb, date, color}) => {
+const FrontNewsItem = ({thumb, date, color, text, link}) => {
+
     return (
         <div className={`newsitem flexi newsitem--${color}`}>
-            <div className="newsitem__img">
+            <Link to={link} className="newsitem__img">
                 <img src={thumb} alt=""></img>
-            </div>
+            </Link>
             <div className="newsitem__right">
                 <div className="newsitem__line flexi">
                     <div className="newsitem__date">{date}</div>
-                    <a href="#" className="newsitem__commcount">
+                    <Link to={link} className="newsitem__commcount">
                     <span>0</span>
                         <i className="fas fa-comment"></i>
-                    </a>
+                    </Link>
                 </div>
-                <a href="#" className="newsitem__text flexi">
-                    <p>Evanescence выпускает эксклюзивный бокссет на новом виниле. Evanescence выпускает эксклюзивный </p>
-                </a>
+                <Link to={link} className="newsitem__text flexi">
+                    <p>{text}</p>
+                </Link>
                 <div className="newsitem__bottom">
                     <div className="newsitem__like">
                         <i className="fas fa-heart"></i>
@@ -38,6 +39,9 @@ const FrontNewsItem = ({thumb, date, color}) => {
 FrontNewsItem.defaultProps = {
     color: "",
     thumb: defaultThumb,
+    text: "",
+    date: "",
+    link: "/",
 }
 
 export default FrontNewsItem

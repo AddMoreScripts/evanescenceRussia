@@ -24,11 +24,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 }
 
 exports.createPages = async ({ graphql, actions }) => {
-    const { createPage } = actions;
+  const { createPage } = actions;
 
 
-    //Songs Pages
-    const songsQuery = await graphql(`
+  //Songs Pages
+  const songsQuery = await graphql(`
       query {
         allMarkdownRemark(filter: {frontmatter: {type: {eq: "song"}}}) {
           edges {
@@ -42,22 +42,22 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }         
     `);
-    songsQuery.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: `/songs/${node.frontmatter.path}`,
-        component: path.resolve(`./src/templates/song/song.js`),
-        context: {
-          // Data passed to context is available
-          // in page queries as GraphQL variables.
-          id: node.id,
-        },
-      });
+  songsQuery.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: `/songs/${node.frontmatter.path}`,
+      component: path.resolve(`./src/templates/song/song.js`),
+      context: {
+        // Data passed to context is available
+        // in page queries as GraphQL variables.
+        id: node.id,
+      },
     });
+  });
 
 
 
-    //Video Pages
-    const videosQuery = await graphql(`
+  //Video Pages
+  const videosQuery = await graphql(`
       query {
         allMarkdownRemark(filter: {frontmatter: {type: {eq: "video"}}}) {
           edges {
@@ -71,16 +71,43 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }      
     `);
-    videosQuery.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: `/video/${node.frontmatter.path}`,
-        component: path.resolve(`./src/templates/video/video.js`),
-        context: {
-          // Data passed to context is available
-          // in page queries as GraphQL variables.
-          id: node.id,
-        },
-      });
+  videosQuery.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: `/video/${node.frontmatter.path}`,
+      component: path.resolve(`./src/templates/video/video.js`),
+      context: {
+        // Data passed to context is available
+        // in page queries as GraphQL variables.
+        id: node.id,
+      },
     });
+  });
+
+
+
+  //News Pages
+  const NewsQuery = await graphql(`
+        query {
+          allContentfulNews(sort: {fields: newsdate, order: DESC}, limit: 100) {
+            edges {
+              node {
+                id
+                slug
+              }
+            }
+          }
+        }           
+      `);
+    NewsQuery.data.allContentfulNews.edges.forEach(({ node }) => {
+    createPage({
+      path: `/news/${node.slug}`,
+      component: path.resolve(`./src/templates/newsPage/newsPage.js`),
+      context: {
+        // Data passed to context is available
+        // in page queries as GraphQL variables.
+        id: node.id,
+      },
+    });
+  });
 
 }

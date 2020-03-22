@@ -1,5 +1,5 @@
 import React from "react"
-//import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import './css/index.css'
 
@@ -51,12 +51,19 @@ const IndexPage = ({ data }) => {
         <div className="front__l">
           <div className="frnews">
             <div className="frtitle">News <small>новости</small></div>
-            <FrontNewsItem date="21 ЯНВ 2020" thumb={newsthumb1} color="violet"></FrontNewsItem>
-            <FrontNewsItem date="21 ЯНВ 2020" thumb={newsthumb2} color="red"></FrontNewsItem>
-            <FrontNewsItem date="1 окт 2020"></FrontNewsItem>
-            <FrontNewsItem date="21 ЯНВ 2020" thumb={newsthumb1} color="black"></FrontNewsItem>
-            <FrontNewsItem date="21 ЯНВ 2020" thumb={newsthumb2} color="black"></FrontNewsItem>
-            <FrontNewsItem date="1 окт 2020" thumb={newsthumb4} color="black"></FrontNewsItem>
+
+            {
+              data.allContentfulNews.edges.map((item) => (
+                <FrontNewsItem
+                  link={"/news/" + item.node.slug}
+                  key={item.node.id}
+                  date={item.node.newsdate}
+                  thumb={item.node.thumbnail ? item.node.thumbnail.file.url: undefined}
+                  color="black"
+                  text={item.node.newstitle} />
+              ))
+            }
+
             <a href="#" className="morebutton">Все новости</a>
           </div>
         </div>
@@ -83,16 +90,22 @@ const IndexPage = ({ data }) => {
 export default IndexPage
 
 
-// export const query = graphql`
-// query {
-//   allSitePage {
-//     edges {
-//       node {
-//         id
-//         path
-//         component
-//       }
-//     }
-//   }
-// }
-// `;
+export const query = graphql`
+query NewsItem {
+  allContentfulNews(limit: 5, sort: {fields: newsdate, order: DESC}) {
+    edges {
+      node {
+        id
+        slug
+        thumbnail {
+          file {
+            url
+          }
+        }
+        newstitle
+        newsdate(formatString: "DD MMMM YYYY", locale: "ru")
+      }
+    }
+  }
+}
+`;

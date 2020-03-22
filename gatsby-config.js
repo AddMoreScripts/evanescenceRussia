@@ -55,6 +55,16 @@ module.exports = {
     },
 
 
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `pbqi6x09zzww`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: `MW-I0ORcmYFz1_gD5WnICZIZP0jxmVYj-kInJEyPV6w`,
+      },
+    },
+
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

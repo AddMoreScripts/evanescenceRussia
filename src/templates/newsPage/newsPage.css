@@ -1,0 +1,107 @@
+.page__right{
+    width: 400px;
+    max-width: 100%;
+}
+.page__meta{
+    padding:0 20px 0 30px;
+    margin-top: 52px;
+    width: 400px;
+    height: 100px;
+    background: rgba(255,255,255,0.05);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.page__meta_nomargin{
+    margin-top: 0;
+}
+.page__meta__l{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-family: "gilroy-web", sans-serif;
+    font-weight: 600;
+}
+.page__date{
+    color:#a6adbb;
+    font-size: 0;
+    line-height: 16px;
+    text-transform: uppercase;
+}
+.page__date i{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    margin-top: -3px;
+}
+.page__date span{
+    padding-left: 10px;
+    font-size: 12px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.page__comments_count{
+    padding-left: 20px;
+    font-size: 0;
+}
+.page__comments_count i{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    margin-top: -2px;
+}
+.page__comments_count span{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    padding-left: 10px;
+}
+
+.page__meta__r{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-end;
+}
+.page__likes{
+    font-size: 0;
+    cursor: pointer;
+    opacity: 0.8;
+    transition:opacity 0.4s ease 0s;
+    margin-right: 15px;
+}
+.page__likes i{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 18px;
+}
+.page__likes span{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 11px;
+    padding-left:6px;
+}
+.page__likes:hover{
+    opacity: 1;
+    color:red;
+}
+
+
+
+
+
+
+
+.page__gallery{
+    padding-top: 50px;
+}
+.page__single-img{
+    display: block;
+    overflow: hidden;
+}
+.page__single-img img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
