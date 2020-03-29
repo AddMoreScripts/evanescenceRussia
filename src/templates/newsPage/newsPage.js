@@ -16,7 +16,7 @@ export default ({ data }) => {
     const crumbs = [
         {
             title: "Новости",
-            path: '/allnews/',
+            path: '/',
         },
         {
             title: data.contentfulNews.newstitle,
@@ -29,11 +29,12 @@ export default ({ data }) => {
             [INLINES.HYPERLINK]: (node) => {
                 if((node.data.uri).includes("youtube.com/watch")) {
                     return <VideoInteractive urlOrId={node.data.uri} />
+                } else {
+                    return node;
                 }
             }
         }
     }
-    // console.log(data.contentfulNews.body.json);
     return (
         <Layout inner={true}>
             <div className="row no-gutters">

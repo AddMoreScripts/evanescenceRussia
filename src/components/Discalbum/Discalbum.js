@@ -24,12 +24,10 @@ const Discalbum = ({albumData}) => {
             descriptionHeightChange('0');
         } else {
             setDescriptionVisible('active');
-            console.log(descriptionEl.current.scrollHeight);
             descriptionHeightChange(descriptionEl.current.scrollHeight);
         }
     }
 
-    console.log(albumInfo);
     return (
         <div className="discalbum">
             <div className="discalbum__top">
