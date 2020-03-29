@@ -26,11 +26,13 @@ export default ({ data }) => {
     
     const options = {
         renderNode: {
-            [INLINES.HYPERLINK]: (node) => {
+            [INLINES.HYPERLINK]: (node, children) => {
                 if((node.data.uri).includes("youtube.com/watch")) {
                     return <VideoInteractive urlOrId={node.data.uri} />
                 } else {
-                    return node;
+                    return (
+                    <a href={node.data.uri} target="_blank" rel="noopener noreferrer">{children}</a>
+                    )
                 }
             }
         }
