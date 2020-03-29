@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import './VideoThumb.css'
 
 import youTubeIcon from '../../images/youtube_color.svg'
@@ -7,7 +6,7 @@ import youTubeIcon from '../../images/youtube_color.svg'
 const VideoThumb = ({thumb, big, red, link, onClick}) => {
     if(link){
         return (
-            <a href="#" className={`videothumb ${big ? 'videothumb--big':""}`} onClick={onClick}>
+            <a href={link} className={`videothumb ${big ? 'videothumb--big':""}`} onClick={onClick}>
                 {thumb ? <img src={thumb} alt=""></img>: ''}
                 <div className="videothumb__over">
                     { red ? <img src={youTubeIcon} alt=""/>: <i className="fab fa-youtube"></i>}
@@ -17,12 +16,12 @@ const VideoThumb = ({thumb, big, red, link, onClick}) => {
     }
 
     return (
-        <div className={`videothumb ${big ? 'videothumb--big':""}`} onClick={onClick}>
+        <span className={`videothumb ${big ? 'videothumb--big':""}`} onClick={onClick}>
             {thumb ? <img src={thumb} alt=""></img>: ''}
-            <div className="videothumb__over">
+            <span className="videothumb__over">
                 { red ? <img src={youTubeIcon} alt=""/>: <i className="fab fa-youtube"></i>}
-            </div>
-        </div>
+            </span>
+        </span>
     )
 
 };

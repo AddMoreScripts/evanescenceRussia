@@ -1,4 +1,3 @@
-
 .fronthero{
     padding-left: 0;
     padding-right: 0;
@@ -93,4 +92,68 @@
     width: 100%;
     top:50%;
     transform: translateY(-50%);
+}
+
+
+
+
+
+
+
+
+@media (max-width:1199px){
+    .fronthero{
+        grid-template-areas: 
+        "big"
+        "one"
+        "two"
+        "bot";
+        grid-template-rows: none;
+        grid-auto-rows: 75px;
+        grid-gap: 8px;
+    }
+    .fronthero__item{
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    .fronthero__item>img{
+        transform: none !important;
+    }
+    .fronthero__item--big>img,
+    .fronthero__item:nth-child(3)>img{
+        object-fit: initial;
+        width: 100%;
+        height: auto;
+        transform: translateY(-15px);
+    }
+    .fronthero__overlay{
+        background: rgba(0, 0, 0, 0.6);
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .fronthero__overlay span{
+        position: relative;
+        font-size: 20px;
+        left:0;
+        right: 0;
+        margin-top: 3px;
+        bottom: 0;
+        padding: 0;
+        text-align: center;
+        transform: none;
+        top:0;
+        font-size: 18px;
+        line-height: 1;
+    }
+    .fronthero__overlay small{
+        display: block;
+        padding-top: 5px;
+        opacity: 0.75;
+        font-size: 11px;
+    }
+    .fronthero__concert .fronthero__overlay{
+        background: rgba(0, 0, 0, 0.1);
+        position: absolute;
+    }
 }

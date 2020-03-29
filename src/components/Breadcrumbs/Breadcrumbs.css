@@ -28,3 +28,21 @@
 .breadcrumbs span{
     padding-right: 10px;
 }
+
+
+
+@media (max-width:1199px){
+    .breadcrumbs{
+        padding-top: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 12px;
+    }
+    .breadcrumbs a{
+        padding-bottom: 10px;
+        color:#666;
+    }
+    .breadcrumbs span{
+        color:#777;
+    }
+}

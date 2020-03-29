@@ -50,6 +50,9 @@ query Discs {
           yearof
           title
           list
+          yandexLink
+          googleLink
+          appleLink
           image {
             publicURL
           }

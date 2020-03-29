@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 // import { Link } from 'gatsby'
 import Layout from '../../components/layout'
 import Breadcrumbs from '../../components/Breadcrumbs'
 import './newsPage.css'
 import { graphql } from 'gatsby';
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { INLINES } from '@contentful/rich-text-types';
+
 import ShareBlock from '../../components/ShareBlock/ShareBlock';
+import VideoInteractive from '../../components/VideoInteractive'
 
 
 
@@ -20,14 +23,27 @@ export default ({ data }) => {
             path: '',
         },
     ]
+    
+    const options = {
+        renderNode: {
+            [INLINES.HYPERLINK]: (node) => {
+                if((node.data.uri).includes("youtube.com/watch")) {
+                    return <VideoInteractive urlOrId={node.data.uri} />
+                }
+            }
+        }
+    }
+    // console.log(data.contentfulNews.body.json);
     return (
         <Layout inner={true}>
             <div className="row no-gutters">
-                <Breadcrumbs data={crumbs}/>
+                <div className="col-12">
+                    <Breadcrumbs data={crumbs}/>
+                </div>
                 <div className="page__content col-12 col-xl order-2 order-xl-1" style={{paddingRight:50 + "px"}}>
                     <h1 className="page__title">{data.contentfulNews.newstitle}</h1>
                     <div className="page__text">
-                        {documentToReactComponents(data.contentfulNews.body.json)}
+                        {documentToReactComponents(data.contentfulNews.body.json, options)}
                     </div>
                 </div>
 

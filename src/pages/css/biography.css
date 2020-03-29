@@ -105,3 +105,53 @@ a.bio__name:hover{
     line-height: 16px;
     padding-top: 10px;
 }
+
+
+
+@media (max-width:1199px){
+    .sideimg{
+        position: relative;
+    }
+    .sideimg__content,
+    .sideimg>figure{
+        position: relative;
+        top:0;
+        left: 0;
+        display: block;
+        margin:24px 0 24px;
+        width: auto;
+        padding-left: 0;
+        max-width: 100%;
+    }
+    .sideimg img{
+        width: 100%;
+        margin: 0;
+    }
+    
+    .bio{
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 100%;
+        padding-bottom: 0;
+    }
+    .bio__item{
+        flex-basis: 48%;
+        margin: 0;
+        flex-shrink: 1;
+        max-width: none;
+        margin-bottom: 10px;
+    }
+    .bio__img img{
+        margin: 0;
+    }
+    a.bio__name{
+        font-size: 14px;
+        white-space: nowrap;
+    }
+    a.bio__name:hover{
+        color:#000;
+    }
+    .bio__name small{
+        line-height: 11px;
+    }
+}

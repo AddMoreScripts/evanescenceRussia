@@ -28,3 +28,16 @@
 .factsblock__link:hover{
     color:#fff;
 }
+
+
+
+
+
+
+@media (max-width:1199px){
+    .factsblock__txt {
+        padding: 15px;
+        font-size: 13px;
+        line-height: 1.6;
+    }
+}

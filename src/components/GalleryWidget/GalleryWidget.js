@@ -9,10 +9,16 @@ const GalleryWidget = ({sources}) => {
     useEffect(() => {
         let GallerySlider = new Swiper('.jsGalleySlider', {
             slidesPerView: 'auto',
-            spaceBetween: 30,
-            slidesPerColumn: 2,
+            spaceBetween: 10,
+            slidesPerColumn: 3,
             slidesPerColumnFill: 'row',
             freeMode: true,
+            breakpoints: {
+                720:{
+                    spaceBetween:30,
+                    slidesPerColumn: 2,
+                },
+            }
         });
     });
 

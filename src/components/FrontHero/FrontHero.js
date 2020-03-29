@@ -11,24 +11,24 @@ import front4 from '../../images/front4.jpg'
 const frontHero = () => {
     return(
         <div className="fronthero container">
-            <Link to="/" className="fronthero__item fronthero__item--big">
+            <Link to="/biography" className="fronthero__item fronthero__item--big">
                 <img src={front1} alt=""/>
                 <div className="fronthero__overlay">
                     <span>Band <small>О группе</small></span>
                 </div>
             </Link>
-            <Link to="/" className="fronthero__item">
+            <Link to="/discography" className="fronthero__item">
                 <img src={front2} alt=""/>
                 <div className="fronthero__overlay">
                     <span>Music <small>Дискография</small></span>
                 </div>
             </Link>
-            <Link to="/" className="fronthero__item">
+            <a to="https://gallery.evanescence-rus.ru/" className="fronthero__item">
                 <img src={front3} alt=""/>
                 <div className="fronthero__overlay">
                     <span>Photos <small>Фото</small></span>
                 </div>
-            </Link>
+            </a>
             <Link to="/" className="fronthero__item fronthero__concert">
             <img src={front4} alt=""/>
                 <div className="fronthero__overlay">

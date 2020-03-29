@@ -1,0 +1,40 @@
+.lyric-wrapper{
+    padding-top: 40px;
+}
+.lyric-letter{
+    padding: 30px 30px;
+    border-bottom: 1px solid #222;
+    align-items: stretch;
+}
+.lyric-letter:last-child{
+    border-bottom: none;
+}
+.lyric-letter__title{
+    width: 15%;
+    flex-shrink: 0;
+    font-size: 70px;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    font-family: "gilroy-web", sans-serif;
+    margin: 0;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+.lyric-letter__content{
+    padding-left: 40px;
+    display: flex;
+    flex-grow: 1;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: center;
+}
+.lyric-letter__content a{
+    display: block;
+    padding-right: 40px;
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}

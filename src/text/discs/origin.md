@@ -3,7 +3,7 @@ type: "album"
 title: "ORIGIN"
 yearof: "2000"
 image: './origin.jpg'
-yandexLink: ""
+yandexLink: "123121"
 googleLink: ""
 appleLink: ""
 list: [

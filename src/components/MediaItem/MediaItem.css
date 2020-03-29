@@ -25,7 +25,8 @@
     right: 0;
     bottom: 0;
 }
-.videothumb__over>i, .videothumb__over>img{
+.mediaitem .videothumb__over>i,
+.mediaitem .videothumb__over>img{
     opacity: 0.1;
 }
 .mediaitem__text{

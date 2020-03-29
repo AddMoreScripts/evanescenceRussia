@@ -6,7 +6,7 @@ import './Breadcrumbs.css'
 
 const Breadcrumbs = ({data}) => {
     return (
-        <div className="breadcrumbs col-12">
+        <div className="breadcrumbs">
             <Link to="/">Главная</Link>
             {data.map((item, index)=>{
                 if(index < (data.length - 1)){

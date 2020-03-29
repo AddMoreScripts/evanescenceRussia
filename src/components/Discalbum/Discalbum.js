@@ -29,16 +29,31 @@ const Discalbum = ({albumData}) => {
         }
     }
 
+    console.log(albumInfo);
     return (
         <div className="discalbum">
             <div className="discalbum__top">
                 <div className="discalbum__left">
                     <img src={albumInfo.image.publicURL} alt=""></img>
-                    <div className="discalbum__buytext">Послушать / Скачать</div>
+                    {
+                        (albumInfo.appleLink || albumInfo.googleLink || albumInfo.yandexLink) &&
+                            <div className="discalbum__buytext">Послушать / Скачать</div>
+                    }
                     <div className="discalbum__buyblock">
-                        <a href="#"><i className="fab fa-apple"></i>Apple Music</a>
-                        <a href="#"><i className="fab fa-google-play"></i>Google Play</a>
-                        <a href="#"><i className="fab fa-yandex"></i>Яндекс музыка</a>
+
+                        { albumInfo.appleLink &&
+                            <a href={albumInfo.appleLink} target="_blank"  rel="noopener noreferrer">
+                                <i className="fab fa-apple"></i>Apple Music</a>
+                        }
+                        { albumInfo.googleLink &&
+                            <a href={albumInfo.googleLink} target="_blank"  rel="noopener noreferrer">
+                                <i className="fab fa-google-play"></i>Google Play</a>
+                        }
+                        { albumInfo.yandexLink &&
+                            <a href={albumInfo.yandexLink} target="_blank"  rel="noopener noreferrer">
+                                <i className="fab fa-yandex"></i>Яндекс музыка</a>
+                        }
+
                     </div>
                 </div>
                 <div className="discalbum__right">

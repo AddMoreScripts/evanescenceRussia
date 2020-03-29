@@ -89,3 +89,33 @@
     width: 140px;
     margin-top: 40px;
 }
+
+
+
+@media (max-width:1199px){
+    .frontwrap{
+        flex-flow: column nowrap;
+        align-items: stretch;
+    }
+    .frtitle{
+        padding-left: 15px;
+    }
+    .front__l{
+        width: auto;
+        max-width: none;
+    }
+    .front__l .morebutton{
+        margin-top: 30px;
+        margin-bottom: 60px;
+    }
+    .front__r{
+        width: auto;
+        padding: 10px 15px;
+    }
+    .frvideos{
+        width: 100%;
+    }
+    .frvideos{
+        grid-auto-rows:80px;
+    }
+}

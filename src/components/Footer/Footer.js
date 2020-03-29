@@ -11,7 +11,7 @@ const Footer = () => {
                 <div className="row">
                     <div className="col-12 col-xl-4">
                         <div className="footer__left">
-                            <a href="#" className="footer__logo"><img src={logo} alt=""/></a>
+                            <Link to="/" className="footer__logo"><img src={logo} alt=""/></Link>
                             <div className="footer__descr">© Evanescence Rus. Русскоязычный сайт<br/>
                                 о группe Evanescence. В случае копирования<br/>
                                 материалов, обратная ссылка (или баннер)<br/>
@@ -42,17 +42,17 @@ const Footer = () => {
                             <div className="footer__title">Навигация</div>
                             <ul>
                                 <li><Link to="/">Главная</Link></li>
-                                <li><a href="#">О Группе</a>
+                                <li><Link to="/biography">О Группе</Link>
                                     <ul>
-                                        <li><a href="#">История группы</a></li>
+                                        <li><Link to="/biography">История группы</Link></li>
                                         <li><a href="#">Биографии</a></li>
                                         <li><a href="#">Интервью</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Дискография</a></li>
-                                <li><a href="#">Медиа</a>
+                                <li><Link to="/discography">Дискография</Link></li>
+                                <li><Link to="/media">Медиа</Link>
                                     <ul>
-                                        <li><a href="#">Видео</a></li>
+                                        <li><Link to="/media/clips">Видео</Link></li>
                                         <li><a href="#">Аудио</a></li>
                                     </ul>
                                 </li>

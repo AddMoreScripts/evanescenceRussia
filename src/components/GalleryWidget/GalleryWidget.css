@@ -34,3 +34,18 @@
 .galleryWidget__more .morebutton{
     background: #1f1f22;
 }
+
+
+@media (max-width:1199px){
+    .galleryWidget{
+        padding: 30px 0;
+        margin-top: 30px;
+    }
+    .galleryWidget .swiper-slide{
+        width: 100px;
+        height: 100px;
+    }
+    .galleryWidget__more{
+        padding-top: 30px;
+    }
+}
