@@ -23,7 +23,7 @@ const frontHero = () => {
                     <span>Music <small>Дискография</small></span>
                 </div>
             </Link>
-            <a to="https://gallery.evanescence-rus.ru/" className="fronthero__item">
+            <a href="https://gallery.evanescence-rus.ru/" className="fronthero__item">
                 <img src={front3} alt=""/>
                 <div className="fronthero__overlay">
                     <span>Photos <small>Фото</small></span>

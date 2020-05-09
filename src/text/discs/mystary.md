@@ -2,7 +2,7 @@
 type: "album"
 title: "Mystary EP"
 yearof: "2003"
-image: './mystaryEp.png'
+image: './mystaryEp.jpg'
 yandexLink: ""
 googleLink: ""
 appleLink: ""

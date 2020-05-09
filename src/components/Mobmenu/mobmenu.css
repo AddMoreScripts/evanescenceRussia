@@ -1,0 +1,68 @@
+.mobmenu{
+    background-color: #16171c;
+    color:#ffffff;
+    position: fixed;
+    top: 0;
+    left: -200px;
+    width: 200px;
+    min-height: 100vh;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 90;
+    will-change: transform;
+    transition: transform 0.2s ease-in 0s;
+    transform: translateX(0);
+    padding-top: 10px;
+}
+.mobmenu.opened{
+    transform: translateX(200px);
+}
+.mobmenu-bg{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 88;
+    background: #000;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease-in 0s;
+}
+.mobmenu-bg.opened{
+    visibility: visible;
+    opacity: 0.8;
+}
+.mobmenu__close{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background:none;
+    border:none;
+    outline: none;
+    right: 5px;
+    top:10px;
+    font-size: 18px;
+    color:#fff;
+}
+.mobmenu__title{
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 20px 0;
+}
+.mobmenu ul{
+
+}
+.mobmenu li{
+
+}
+.mobmenu li>a{
+    color:#d0d0d0;
+    font-size: 13px;
+    line-height: 18px;
+    padding: 10px 30px;
+    border-bottom: 1px solid #222;
+    display: block;
+}

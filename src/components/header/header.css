@@ -167,6 +167,9 @@
         display: none;
     }
     .mobmenu-link{
+        background: none;
+        border:none;
+        outline: none;
         display: flex;
         flex-flow: row nowrap;
         align-items: center;

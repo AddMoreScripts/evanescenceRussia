@@ -38,6 +38,10 @@
         max-width: 1200px;
     }
 }
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
     font-family: 'firasans-web', sans-serif;
     color:#fff;
@@ -250,5 +254,31 @@ div{
     .page__text .col-12:last-child{
         border-bottom: none;
         margin-bottom: 0;
+    }
+}
+
+
+
+
+
+
+
+
+@media (max-width:992px){
+    body .pagehtml__title{
+        padding-top: 30px;
+        font-size: 24px;
+        line-height: 30px;
+    }
+    body .pagehtml__menu{
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+    body .pagehtml__menu li{
+        line-height: 40px;
+        font-size: 14px;
+    }
+    body .pagehtml__menu li>a{
+        min-width: 0px;
     }
 }

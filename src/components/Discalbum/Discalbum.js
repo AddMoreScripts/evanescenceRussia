@@ -60,7 +60,7 @@ const Discalbum = ({albumData}) => {
                         <ol>
                             {
                                 albumInfo.list.map( (item) => (
-                                  <li key={item}><a>{item}</a></li>  
+                                  <li key={item}><span>{item}</span></li>  
                                 ))
                             }
                         </ol>

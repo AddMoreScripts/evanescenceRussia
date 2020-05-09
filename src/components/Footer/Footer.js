@@ -23,17 +23,17 @@ const Footer = () => {
                         <div className="footer__social__we">
                             <div className="footer__title">Официальные аккаунты группы</div>
                             <div className="footer__iconwrap footer__iconwrap_first">
-                                <a href="https://twitter.com/evanescence" target="_blank"><i className="fab fa-twitter"></i></a>
-                                <a href="https://www.facebook.com/Evanescence" target="_blank"><i className="fab fa-facebook-square"></i></a>
-                                <a href="https://www.instagram.com/evanescenceofficial/" target="_blank"><i className="fab fa-instagram"></i></a>
-                                <a href="https://www.youtube.com/user/evanescencevideo" target="_blank"><i className="fab fa-youtube"></i></a>
+                                <a href="https://twitter.com/evanescence" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
+                                <a href="https://www.facebook.com/Evanescence" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-square"></i></a>
+                                <a href="https://www.instagram.com/evanescenceofficial/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+                                <a href="https://www.youtube.com/user/evanescencevideo" target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube"></i></a>
                             </div>
                             <div className="footer__title">Мы в социальных сетях</div>
                             <div className="footer__iconwrap">
-                                <a href="https://www.youtube.com/user/EvanescenceRussia" target="_blank"><i className="fab fa-youtube"></i></a>
-                                <a href="https://twitter.com/EvanescenceRu" target="_blank"><i className="fab fa-twitter"></i></a>
-                                <a href="https://vk.com/evanescence" target="_blank"><i className="fab fa-vk"></i></a>
-                                <a href="https://vimeo.com/user8476795" target="_blank"><i className="fab fa-vimeo"></i></a>
+                                <a href="https://www.youtube.com/user/EvanescenceRussia" target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube"></i></a>
+                                <a href="https://twitter.com/EvanescenceRu" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
+                                <a href="https://vk.com/evanescence" target="_blank" rel="noopener noreferrer"><i className="fab fa-vk"></i></a>
+                                <a href="https://vimeo.com/user8476795" target="_blank" rel="noopener noreferrer"><i className="fab fa-vimeo"></i></a>
                             </div>
                         </div>
                     </div>

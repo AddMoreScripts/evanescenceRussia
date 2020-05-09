@@ -30,7 +30,7 @@ VideoThumb.defaultProps = {
     big: "",
     red: "",
     thumb: false,
-    link: true,
+    link: '#',
 }
 
 export default VideoThumb

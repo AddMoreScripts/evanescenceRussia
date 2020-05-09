@@ -1,17 +1,23 @@
-import React from "react"
+import React, {useState} from "react"
 import { Link } from "gatsby"
 import './header.css'
 import logo from '../../images/logo2.png'
+import Mobmenu from '../Mobmenu'
 
 
 
 const Header = ({isFixed}) => {
 
+  let [mobmenuIsOpen, setMobmenuIsOpen] = useState(false);
+
   return (
     <>
+      <Mobmenu isOpen={mobmenuIsOpen} closeHandler={() => {setMobmenuIsOpen(false)}} />
       <div className={"header " + (isFixed ? 'header--fixed':'')}>
         <div className="container">
-          <span className="mobmenu-link" id="jsMobMenuLink"><i className="fas fa-bars"></i> <small>Меню</small></span>
+          <button className="mobmenu-link" onClick={() => {setMobmenuIsOpen(true)}}>
+            <i className="fas fa-bars"></i> <small>Меню</small>
+          </button>
           <ul className="header__menu">
             <li>
                 <Link to='/'>Главная</Link>
