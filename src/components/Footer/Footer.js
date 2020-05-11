@@ -45,35 +45,35 @@ const Footer = () => {
                                 <li><Link to="/biography">О Группе</Link>
                                     <ul>
                                         <li><Link to="/biography">История группы</Link></li>
-                                        <li><a href="#">Биографии</a></li>
-                                        <li><a href="#">Интервью</a></li>
+                                        <li><a href="/">Биографии</a></li>
+                                        <li><a href="/">Интервью</a></li>
                                     </ul>
                                 </li>
                                 <li><Link to="/discography">Дискография</Link></li>
                                 <li><Link to="/media">Медиа</Link>
                                     <ul>
                                         <li><Link to="/media/clips">Видео</Link></li>
-                                        <li><a href="#">Аудио</a></li>
+                                        <li><a href="/">Аудио</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Песни</a></li>
-                                <li><a href="#">Разное</a>
+                                <li><Link to='/lyric/'>Песни</Link></li>
+                                <li><Link to="/other/">Разное</Link>
                                     <ul>
-                                        <li><a href="#">Скачать фонограммы</a></li>
-                                        <li><a href="#">Скачать альбомы</a></li>
-                                        <li><a href="#">Скачать ноты</a></li>
+                                        <li><Link to='/other/minus/'>Скачать фонограммы</Link></li>
+                                        <li><Link to='/media/audio/'>Скачать альбомы</Link></li>
+                                        <li><Link to='/other/piano-sheets/'>Скачать ноты</Link></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Фотографии</a></li>
+                                <li><a href="https://gallery.evanescence-rus.ru/">Фотографии</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div className="botmenu__row row no-gutters justify-content-between align-items-center">
                     <ul className="botmenu">
-                        <li><a href="#">О сайте</a></li>
-                        <li><a href="#">Контакты</a></li>
-                        <li><a href="#">Ссылки</a></li>
+                        <li><a href="/">О сайте</a></li>
+                        <li><a href="/">Контакты</a></li>
+                        <li><a href="/">Ссылки</a></li>
                     </ul>
                     <div className="copy">
                         Development by A↑F

@@ -1,0 +1,86 @@
+.imglinkblock{
+    display: block;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #090c10;
+    margin: 0 30px 60px;
+}
+.imglinkblock>img{
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+    transform: scale(1);
+    transition: transform 0.4s ease 0s, opacity 0.4s ease 0s;
+}
+.imglinkblock__abs{
+    position: absolute;
+    display: block;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(10,14,18,0.9);
+    color:#fff;
+    font-size: 20px;
+    line-height: 30px;
+    font-family: "gilroy-web", sans-serif;
+    font-weight: 400;
+    white-space: nowrap;
+    padding: 10px 24px;
+    border-radius: 5px;
+    min-width: 50%;
+    text-align: center;
+}
+.imglinkblock:hover>img{
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+.imglinkblock:hover .imglinkblock__abs{
+    background-color: rgb(10,14,18);
+}
+
+
+
+
+
+
+
+.pianosheetscovers{
+    margin-left: -20px;
+    margin-bottom: 24px;
+    max-width: 600px;
+}
+.pianosheetscovers img{
+    margin-left: 20px !important;
+    width: calc(50% - 20px);
+}
+
+
+
+
+
+@media (max-width:992px){
+    .imglinkblock{
+    
+    }
+    .imglinkblock>img{
+        opacity: 1;
+    }
+    .imglinkblock:hover img{
+        transform: none;
+        opacity: 1;
+    }
+    .imglinkblock__abs{
+        white-space: normal;
+        min-width: 90%;
+        padding: 10px;
+        font-size: 15px;
+        line-height: 24px;
+    }
+}
+@media all and (max-width:500px){
+    .imglinkblock{
+        margin: 0 0px 30px;
+    }
+}

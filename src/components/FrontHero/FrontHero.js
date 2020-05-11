@@ -29,7 +29,7 @@ const frontHero = () => {
                     <span>Photos <small>Фото</small></span>
                 </div>
             </a>
-            <Link to="/" className="fronthero__item fronthero__concert">
+            <Link to="/soon/" className="fronthero__item fronthero__concert">
             <img src={front4} alt=""/>
                 <div className="fronthero__overlay">
                     <span>Концерты в России</span>

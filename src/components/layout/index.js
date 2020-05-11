@@ -6,11 +6,9 @@
  */
 
 import React, { useState, useEffect } from "react"
-// import { useStaticQuery, graphql } from "gatsby"
 import './layout.css'
 
 import Header from "../header"
-import Breadcrumbs from "../Breadcrumbs"
 import Footer from "../Footer"
 
 
@@ -31,14 +29,14 @@ const Layout = ({ children, inner }) => {
       if (trigger) {
         trigger = false;
         var scrolled = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrolled >= 200) {
+        if (scrolled >= 2) {
           setheaderFixed(true);
         }
         else {
           setheaderFixed(false);
         }
       }
-    }, 250);
+    }, 100);
 
     return function cleanAll(){
       clearInterval(scrollInterval);

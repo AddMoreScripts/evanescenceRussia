@@ -34,6 +34,12 @@ const Header = ({isFixed}) => {
             <li>
                 <Link to='/lyric/'>Песни</Link>
             </li>
+            <li>
+              <Link to='/other/' activeClassName="current">Разное</Link>
+            </li>
+            <li>
+              <a href="https://gallery.evanescence-rus.ru/">Фотографии</a>
+            </li>
           </ul>
           <div className="search">
             <span className="mobmsearch"><i className="fas fa-search"></i></span>

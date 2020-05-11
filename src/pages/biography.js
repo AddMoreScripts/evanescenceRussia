@@ -38,11 +38,11 @@ const Biography = ({ data }) => {
 
                 <div className="bio">
                     <div className="bio__item">
-                        <a href="#" className="bio__img">
+                        <Link to="/biography/amy-lynn-hartzler/" className="bio__img">
                             <img src={amy} alt=""></img>
-                        </a>
+                        </Link>
                         <div className="bio__content">
-                            <a href="#" className="bio__name">Эми Ли <small>Amy Lee</small></a>
+                            <Link to="/biography/amy-lynn-hartzler/" className="bio__name">Эми Ли <small>Amy Lee</small></Link>
                             <div className="bio__social">
                                 <a href="https://twitter.com/AmyLeeEV" target="_blank" rel="noopener noreferrer" className="bio__link"><i className="fab fa-twitter"></i></a>
                                 <a href="https://www.facebook.com/AmyLeeOfficial" target="_blank" rel="noopener noreferrer" className="bio__link"><i className="fab fa-facebook-square"></i></a>
@@ -53,11 +53,11 @@ const Biography = ({ data }) => {
                     </div>
 
                     <div className="bio__item">
-                        <a href="#" className="bio__img">
+                        <a href="/" className="bio__img">
                             <img src={tim} alt=""></img>
                         </a>
                         <div className="bio__content">
-                            <a href="#" className="bio__name">Тим МакКорд <small>TIM MCCORD</small></a>
+                            <a href="/" className="bio__name">Тим МакКорд <small>TIM MCCORD</small></a>
                             <div className="bio__social">
                                 <a href="https://twitter.com/tim_mccord" target="_blank" rel="noopener noreferrer" className="bio__link"><i className="fab fa-twitter"></i></a>
                                 <a href="https://www.instagram.com/ttmccord/" target="_blank" rel="noopener noreferrer" className="bio__link"><i className="fab fa-instagram"></i></a>
@@ -66,11 +66,11 @@ const Biography = ({ data }) => {
                     </div>
 
                     <div className="bio__item">
-                        <a href="#" className="bio__img">
+                        <a href="/" className="bio__img">
                             <img src={troy} alt=""></img>
                         </a>
                         <div className="bio__content">
-                            <a href="#" className="bio__name">Трой МакЛоухорн <small>Troy McLawhorn </small></a>
+                            <a href="/" className="bio__name">Трой МакЛоухорн <small>Troy McLawhorn </small></a>
                             <div className="bio__social">
                                 <a href="https://twitter.com/troy__mclawhorn" target="_blank" rel="noopener noreferrer" className="bio__link"><i className="fab fa-twitter"></i></a>
                                 <a href="https://www.facebook.com/troy.mclawhorn" target="_blank" rel="noopener noreferrer" className="bio__link"><i className="fab fa-facebook-square"></i></a>
@@ -80,11 +80,11 @@ const Biography = ({ data }) => {
                     </div>
 
                     <div className="bio__item">
-                        <a href="#" className="bio__img">
+                        <a href="/" className="bio__img">
                             <img src={jen} alt=""></img>
                         </a>
                         <div className="bio__content">
-                            <a href="#" className="bio__name">Джен Маджура <small>Jen Majura</small></a>
+                            <a href="/" className="bio__name">Джен Маджура <small>Jen Majura</small></a>
                             <div className="bio__social">
                                 <a href="https://twitter.com/jenmajura" target="_blank" rel="noopener noreferrer" className="bio__link"><i className="fab fa-twitter"></i></a>
                                 <a href="https://www.facebook.com/jenmajuraofficial" target="_blank" rel="noopener noreferrer" className="bio__link"><i className="fab fa-facebook-square"></i></a>
@@ -94,11 +94,11 @@ const Biography = ({ data }) => {
                     </div>
 
                     <div className="bio__item">
-                        <a href="#" className="bio__img">
+                        <a href="/" className="bio__img">
                             <img src={will} alt=""></img>
                         </a>
                         <div className="bio__content">
-                            <a href="#" className="bio__name">Уилл Хант <small>Will Hunt</small></a>
+                            <a href="/" className="bio__name">Уилл Хант <small>Will Hunt</small></a>
                             <div className="bio__social">
                                 <a href="https://twitter.com/willfnhunt" target="_blank" rel="noopener noreferrer" className="bio__link"><i className="fab fa-twitter"></i></a>
                                 <a href="https://www.facebook.com/Will-Hunt-287898684562943/" target="_blank" rel="noopener noreferrer" className="bio__link"><i className="fab fa-facebook-square"></i></a>

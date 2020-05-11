@@ -74,60 +74,9 @@ a.bio__name:hover{
 }
 
 
-.sideimg{
-    position: relative;
-}
-.sideimg figure{
-    display: block;
-    margin: 0;
-    padding: 0;
-    padding-bottom: 30px;
-}
-.sideimg__content,
-.sideimg>figure{
-    position: absolute;
-    top:0;
-    left: 100%;
-    display: block;
-    margin: 0;
-    width: 290px;
-    padding-left: 40px;
-}   
-.sideimg img{
-    display: block;
-    margin:0;
-}
-.sideimg figcaption{
-    opacity: 0.3;
-    color: #c0cbd9;
-    font-size: 11px;
-    font-weight: 400;
-    line-height: 16px;
-    padding-top: 10px;
-}
-
 
 
 @media (max-width:1199px){
-    .sideimg{
-        position: relative;
-    }
-    .sideimg__content,
-    .sideimg>figure{
-        position: relative;
-        top:0;
-        left: 0;
-        display: block;
-        margin:24px 0 24px;
-        width: auto;
-        padding-left: 0;
-        max-width: 100%;
-    }
-    .sideimg img{
-        width: 100%;
-        margin: 0;
-    }
-    
     .bio{
         flex-wrap: wrap;
         justify-content: space-around;

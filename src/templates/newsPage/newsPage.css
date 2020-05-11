@@ -2,6 +2,9 @@
     width: 400px;
     max-width: 100%;
 }
+.page__title__mob{
+    display: none;
+}
 .page__meta{
     padding:0 20px 0 30px;
     margin-top: 52px;
@@ -104,4 +107,44 @@
     display: block;
     width: 100%;
     height: auto;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+@media (max-width:992px){
+    .page__title{
+        display: none;
+    }
+    .page__title__mob{
+        display: block;
+    }
+    .page__right{
+        width: 100%;
+    }
+    .page__meta{
+        width: auto;
+        height: auto;
+        margin-top: 25px;
+        padding-left: 0px;
+        padding-right: 0px;
+        background: none;
+    }
+    .page__meta__r .shareblock{
+        display: none;
+    }
+    .page__gallery{
+        padding-top: 25px;
+    }
+    .page__title_rightgap{
+        padding-right: 0;
+    }
+    .page__leadvideo{
+        padding-top: 30px;
+    }
 }

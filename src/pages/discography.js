@@ -1,7 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-
-import './css/discography.css'
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Discalbum from "../components/Discalbum"
@@ -24,8 +22,8 @@ const Discography = ({ data }) => {
         <div className="pagehtml__title pagehtml__title--centred">Дискография Evanescence</div>
         <div className="pagehtml__menu">
           <ul>
-            <li><a href="#" className="active">Альбомы</a></li>
-            <li><a href="#">Сигнлы</a></li>
+            <li><a href="/" className="active">Альбомы</a></li>
+            <li><a href="/">Сигнлы</a></li>
           </ul>
         </div>
         {

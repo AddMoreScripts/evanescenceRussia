@@ -27,7 +27,8 @@ export default ({ data }) => {
     const options = {
         renderNode: {
             [INLINES.HYPERLINK]: (node, children) => {
-                if((node.data.uri).includes("youtube.com/watch")) {
+                console.log(node);
+                if((node.data.uri).includes("youtube.com/watch") && (node.content[0].value).includes("youtube.com/watch")) {
                     return <VideoInteractive urlOrId={node.data.uri} />
                 } else {
                     return (
@@ -43,6 +44,7 @@ export default ({ data }) => {
                 <div className="col-12">
                     <Breadcrumbs data={crumbs}/>
                 </div>
+                <div className="page__title page__title__mob">{data.contentfulNews.newstitle}</div>
                 <div className="page__content col-12 col-xl order-2 order-xl-1" style={{paddingRight:50 + "px"}}>
                     <h1 className="page__title">{data.contentfulNews.newstitle}</h1>
                     <div className="page__text">

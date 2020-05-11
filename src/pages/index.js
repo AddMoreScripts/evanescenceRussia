@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 import './css/index.css'
 
@@ -64,7 +64,7 @@ const IndexPage = ({ data }) => {
               ))
             }
 
-            <a href="#" className="morebutton">Все новости</a>
+            <Link to="/news/" className="morebutton">Все новости</Link>
           </div>
         </div>
 
@@ -77,7 +77,7 @@ const IndexPage = ({ data }) => {
             <VideoThumb thumb={newsthumb1}></VideoThumb>
             <VideoThumb thumb={videoThumb2}></VideoThumb>
           </div>
-          <a href="#" className="morebutton">смотреть все</a>
+          <a href="/" className="morebutton">смотреть все</a>
 
           <FactsBlock></FactsBlock>
         </div>

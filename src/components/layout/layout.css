@@ -131,6 +131,9 @@ div{
     margin:48px 0;
     max-width: 100%;
 }
+.page__text div>img{
+    margin: 0;
+}
 .page__text blockquote{
     margin:24px 0;
     padding: 24px;
@@ -168,19 +171,30 @@ div{
     font-family: "gilroy-web", sans-serif;
     margin:36px 0 24px;
 }
+.page__text h6{
+    font-size: 10px;
+    line-height: 18px;
+    font-weight: 400;
+}
 .page__text h2>i,
 .page__text h3>i{
     margin-right: 10px;
 }
-.page__text ul{
-    padding-bottom: 24px;
+.page__text ul,
+.page__text ol{
+    margin-bottom: 18px;
 }
-.page__text ul li{
+.page__text ol{
+    counter-reset: textol;
+}
+.page__text ul li,
+.page__text ol li{
     padding-left: 30px;
     position: relative;
     margin-bottom: 3px;
 }
-.page__text ul li:before{
+.page__text ul li:before,
+.page__text ol li:before{
     position: absolute;
     content:"\f111";
     font-family: foont;
@@ -192,11 +206,197 @@ div{
     left: 12px;
     font-size: 4px;
 }
+
+.page__text ol li:before{
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    content: counter(textol) ".";
+    counter-increment: textol;
+    font-family: inherit;
+    background: none;
+    top: 5px;
+    text-align: right;
+    left: 2px;
+    width: 20px;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 400;
+    color:#fff;
+}
+
 .page__leadvideo{
     clear: both;
     padding-top: 50px;
     max-width: 800px;
 }
+.pagehtml__title{
+    color:#fff;
+    font-size: 30px;
+    line-height: 42px;
+    font-family: "gilroy-web", sans-serif;
+    font-weight: 700;
+    padding-top: 40px;
+}
+.pagehtml__title--centred{
+    text-align: center;
+}
+
+
+
+.sideimg{
+    position: relative;
+}
+.sideimg figure{
+    display: block;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
+}
+.sideimg__content,
+.sideimg>figure{
+    position: absolute;
+    top:0;
+    left: 100%;
+    display: block;
+    margin: 0;
+    width: 290px;
+    padding-left: 40px;
+}   
+.sideimg img{
+    display: block;
+    margin:0;
+}
+.sideimg figcaption{
+    opacity: 0.3;
+    color: #c0cbd9;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 16px;
+    padding-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* menu disc-singles */
+.pagehtml__menu{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 75px;
+}
+.pagehtml__menu ul{
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    background: #2e3136;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.pagehtml__menu li{
+    line-height: 50px;
+    font-size: 18px;
+    font-family: "gilroy-web", sans-serif;
+    font-weight: 600;
+}
+.pagehtml__menu li>a{
+    color:#fff;
+    display: block;
+    min-width: 150px;
+    padding:0 15px;
+}
+.pagehtml__menu li>a:hover{
+    background-color: #3e4654;
+}
+.pagehtml__menu li>a.active{
+    background-color: #616c7e;
+}
+.pagehtml__content{
+    padding-top: 50px;
+}
+/* menu disc-singles */
+
+
+
+
+
+
+
+
+/* Pagination */
+.pagination{
+    max-width: 750px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+.pagination .nav-links{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.pagination a,
+.pagination .dots,
+.pagination .current{
+    width: 35px;
+    line-height: 35px;
+    background: #1c1c24;
+    text-align: center;
+    color:#fff;
+    font-size: 15px;
+    border-radius: 20px;
+    font-family: "gilroy-web", sans-serif;
+    font-weight: 600;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+.pagination .dots{
+    background: none;
+}
+.pagination .current{
+    background-color: #963232;
+}
+.pagination .prev,
+.pagination .next{
+    width: 45px;
+    line-height: 45px;
+}
+.pagination a:hover{
+    background: #42222f;
+}
+/* Pagination END */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -222,7 +422,6 @@ div{
         font-size: 24px;
         line-height: 30px;
     }
-    
     .page__text{
         margin-top: 30px;
     }
@@ -255,6 +454,24 @@ div{
         border-bottom: none;
         margin-bottom: 0;
     }
+    .sideimg{
+        position: relative;
+    }
+    .sideimg__content,
+    .sideimg>figure{
+        position: relative;
+        top:0;
+        left: 0;
+        display: block;
+        margin:24px 0 24px;
+        width: auto;
+        padding-left: 0;
+        max-width: 100%;
+    }
+    .sideimg img{
+        width: 100%;
+        margin: 0;
+    }
 }
 
 
@@ -266,9 +483,9 @@ div{
 
 @media (max-width:992px){
     body .pagehtml__title{
-        padding-top: 30px;
         font-size: 24px;
         line-height: 30px;
+        padding-top: 20px;
     }
     body .pagehtml__menu{
         padding-top: 30px;
@@ -281,4 +498,15 @@ div{
     body .pagehtml__menu li>a{
         min-width: 0px;
     }
+    .page{
+        margin-bottom: 0;
+    }
+    .page__content{
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .pagehtml__content{
+        padding-top: 30px;
+    }
+    
 }

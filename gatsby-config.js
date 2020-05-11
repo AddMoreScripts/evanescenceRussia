@@ -1,8 +1,12 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Evanescence Russia`,
+    description: `Русскоязычный сайт о Amy Lee и группе Enanescence`,
+    author: `AddMoreScripts`,
   },
 
 
@@ -61,7 +65,7 @@ module.exports = {
       options: {
         spaceId: `pbqi6x09zzww`,
         // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: `MW-I0ORcmYFz1_gD5WnICZIZP0jxmVYj-kInJEyPV6w`,
+        accessToken: `${process.env.GATSBY_CONTENTFULL_KEY}`,
       },
     },
 

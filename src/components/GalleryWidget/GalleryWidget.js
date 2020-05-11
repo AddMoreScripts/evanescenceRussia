@@ -7,7 +7,7 @@ import Swiper from 'swiper';
 const GalleryWidget = ({sources}) => {
 
     useEffect(() => {
-        let GallerySlider = new Swiper('.jsGalleySlider', {
+        new Swiper('.jsGalleySlider', {
             slidesPerView: 'auto',
             spaceBetween: 10,
             slidesPerColumn: 3,
@@ -36,7 +36,7 @@ const GalleryWidget = ({sources}) => {
                 </div>
             </div>
             <div className="galleryWidget__more">
-                <a href="#" className="morebutton">Все фотографии</a>
+                <a href="/" className="morebutton">Все фотографии</a>
             </div>
         </div>
     );

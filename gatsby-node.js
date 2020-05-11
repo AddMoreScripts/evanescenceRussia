@@ -58,19 +58,19 @@ exports.createPages = async ({ graphql, actions }) => {
 
   //Video Pages
   const videosQuery = await graphql(`
-      query {
-        allMarkdownRemark(filter: {frontmatter: {type: {eq: "video"}}}) {
-          edges {
-            node {
-              id
-              frontmatter {
-                path
-              }
+    query {
+      allMarkdownRemark(filter: {frontmatter: {type: {eq: "video"}}}) {
+        edges {
+          node {
+            id
+            frontmatter {
+              path
             }
           }
         }
-      }      
-    `);
+      }
+    }      
+  `);
   videosQuery.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: `/video/${node.frontmatter.path}`,
@@ -88,7 +88,7 @@ exports.createPages = async ({ graphql, actions }) => {
   //News Pages
   const NewsQuery = await graphql(`
         query {
-          allContentfulNews(sort: {fields: newsdate, order: DESC}, limit: 100) {
+          allContentfulNews(sort: {fields: newsdate, order: DESC}) {
             edges {
               node {
                 id
@@ -109,5 +109,25 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     });
   });
+
+
+
+  //AllNewsPage with Pagination
+  const AllNewsPosts = NewsQuery.data.allContentfulNews.edges
+  const postsPerPage = 6
+  const numPages = Math.ceil(AllNewsPosts.length / postsPerPage)
+  Array.from({ length: numPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/news` : `/news/${i + 1}`,
+      component: path.resolve("./src/templates/allnews/allnews.js"),
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        numPages,
+        currentPage: i + 1,
+      },
+    })
+  });
+
 
 }
