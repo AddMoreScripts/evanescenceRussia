@@ -30,6 +30,10 @@ const Header = ({isFixed}) => {
             </li>
             <li>
                 <Link to='/media/'>Медиа</Link>
+                <ul>
+                    <li><Link to="/media/clips/">Видео</Link></li>
+                    <li><Link to="/media/audio/">Аудио</Link></li>
+                </ul>
             </li>
             <li>
                 <Link to='/lyric/'>Песни</Link>

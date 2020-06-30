@@ -1,5 +1,5 @@
 import React from "react"
-// import { Link, graphql } from "gatsby"
+import { Link } from "gatsby"
 
 import Layout from "../../components/layout"
 import Breadcrumbs from '../../components/Breadcrumbs'
@@ -85,6 +85,8 @@ const Minus = ({ data }) => {
                         <li>
                             <a href="https://files.evanescence-rus.ru/files/Minus/Whisper[evanescence-rus.ru].mp3">Whisper (mp3 4.6мБ)</a></li>
                     </ul>
+
+                    <Link to="/other/" className="button page__button"><i className="fas fa-arrow-left"></i> Назад</Link>
 
                 </div>
             </div>

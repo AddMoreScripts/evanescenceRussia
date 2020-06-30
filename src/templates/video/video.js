@@ -3,7 +3,7 @@ import Layout from '../../components/layout'
 import Breadcrumbs from '../../components/Breadcrumbs'
 import './video.css'
 import VideoInteractive from '../../components/VideoInteractive'
-import { graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 
 
 
@@ -35,6 +35,7 @@ export default ({ data }) => {
                     <h2><i className="fas fa-feather-alt"></i> Информация о Видео</h2>
                     <div dangerouslySetInnerHTML={{__html: data.markdownRemark.html }}></div>
                 </div>
+                <Link to="/media/clips/" className="button page__button"><i className="fas fa-arrow-left"></i> Назад</Link>
             </div>
         </Layout>
     )

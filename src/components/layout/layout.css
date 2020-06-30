@@ -71,6 +71,37 @@ a:hover{
 div{
     box-sizing: border-box;
 }
+.button{
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 10px 0px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.33;
+    outline: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    border:none;
+    position: relative;
+    background: #644185;
+    border-radius: 3px;
+    font-weight: 400;
+}
+.button:hover{
+    background: #784ca1;
+    color:#fff !important;
+}
+.button:active{
+    top:1px;
+}
+.button:disabled{
+    background: #ddd;
+    border-color:#d5d5d5;
+    color:#fff;
+}
 
 
 
@@ -206,7 +237,6 @@ div{
     left: 12px;
     font-size: 4px;
 }
-
 .page__text ol li:before{
     width: auto;
     height: auto;
@@ -224,7 +254,6 @@ div{
     font-weight: 400;
     color:#fff;
 }
-
 .page__leadvideo{
     clear: both;
     padding-top: 50px;
@@ -241,6 +270,18 @@ div{
 .pagehtml__title--centred{
     text-align: center;
 }
+.page__button{
+    height: 40px;
+    padding: 0 30px;
+    font-size: 14px;
+    margin-top: 18px;
+}
+.page__button i{
+    margin-right: 10px;
+    font-size: 12px;
+    margin-left: -6px;
+}
+
 
 
 
@@ -507,6 +548,10 @@ div{
     }
     .pagehtml__content{
         padding-top: 30px;
+    }
+    .page__button{
+        margin-top: 15px;
+        margin-bottom: 30px;
     }
     
 }

@@ -52,8 +52,8 @@ const Footer = () => {
                                 <li><Link to="/discography">Дискография</Link></li>
                                 <li><Link to="/media">Медиа</Link>
                                     <ul>
-                                        <li><Link to="/media/clips">Видео</Link></li>
-                                        <li><a href="/">Аудио</a></li>
+                                        <li><Link to="/media/clips/">Видео</Link></li>
+                                        <li><Link to="/media/audio/">Аудио</Link></li>
                                     </ul>
                                 </li>
                                 <li><Link to='/lyric/'>Песни</Link></li>

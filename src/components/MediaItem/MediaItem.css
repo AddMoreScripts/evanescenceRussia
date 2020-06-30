@@ -47,3 +47,23 @@
 .mediaitem:hover .mediaitem__text small{
     opacity: 1;
 }
+
+
+
+
+
+
+@media(max-width:992px){
+    .mediaitem{
+        margin-bottom: 20px;
+    }
+    .mediaitem__img{
+        flex-basis: 40%;
+    }
+    .mediaitem__text{
+        font-size: 16px;
+    }
+    .mediaitem__text small{
+        padding-top: 6px;
+    }
+}
